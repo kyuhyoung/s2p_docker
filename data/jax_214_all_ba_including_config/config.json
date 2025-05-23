@@ -1,0 +1,21 @@
+{
+  "out_dir" : "/workspace/s2p_new/output_jax_214",
+  "images" : [
+    {"img" : "JAX_214_005_RGB.tif"},
+    {"img" : "JAX_214_006_RGB.tif"}
+    ],
+  "roi" : {
+      "x" : 0,
+      "y" : 0,
+      "w" : 2000,
+      "h" : 2000
+  },
+  "horizontal_margin": 20,
+  "vertical_margin": 5,
+  "tile_size" : 10000,
+  "disp_range_method" : "sift",
+  "msk_erosion": 0,
+  "dsm_resolution": 0.5,
+  "3d_filtering_r": 5,
+  "3d_filtering_n": 50
+}

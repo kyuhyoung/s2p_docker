@@ -1,0 +1,25 @@
+{
+  "out_dir" : "/workspace/s2p_new/output_jax_068",
+  "images" : [
+    {"img" : "JAX_068_001_RGB.tif"},
+    {"img" : "JAX_068_002_RGB.tif"},
+    {"img" : "JAX_068_003_RGB.tif"},
+    {"img" : "JAX_068_004_RGB.tif"},
+    {"img" : "JAX_068_005_RGB.tif"},
+    {"img" : "JAX_068_006_RGB.tif"}
+    ],
+  "roi" : {
+      "x" : 0,
+      "y" : 0,
+      "w" : 700,
+      "h" : 800
+  },
+  "horizontal_margin": 20,
+  "vertical_margin": 5,
+  "tile_size" : 1000,
+  "disp_range_method" : "sift",
+  "msk_erosion": 0,
+  "dsm_resolution": 0.5,
+  "3d_filtering_r": 5,
+  "3d_filtering_n": 50
+}
