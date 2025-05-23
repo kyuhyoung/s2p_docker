@@ -42,7 +42,10 @@ except ImportError:
     BdistWheel = None
 
 
-requirements = ['numpy',
+#requirements = ['numpy',
+requirements = [
+                'urllib3<1.27,>=1.25.4',     # <-- satisfy botocore on Python < 3.10
+                'numpy',
                 'scipy',
                 'rasterio[s3]>=1.2a1',
                 'utm',

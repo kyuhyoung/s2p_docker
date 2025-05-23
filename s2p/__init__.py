@@ -62,7 +62,7 @@ def pointing_correction(tile, i):
     rpc2 = cfg['images'][i]['rpcm']
 
     # correct pointing error
-    print('correcting pointing on tile {} {} pair {}...'.format(x, y, i))
+    print('correcting pointing on tile {} {} pair {}... '.format(x, y, i))
     method = 'relative' if cfg['relative_sift_match_thresh'] is True else 'absolute'
     A, m = pointing_accuracy.compute_correction(
         img1, img2, rpc1, rpc2, x, y, w, h, method,
@@ -174,7 +174,7 @@ def stereo_matching(tile, i):
     out_dir = os.path.join(tile['dir'], 'pair_{}'.format(i))
     x, y = tile['coordinates'][:2]
 
-    print('estimating disparity on tile {} {} pair {}...'.format(x, y, i))
+    print('estimating disparity on tile {} {} pair {}... '.format(x, y, i))
     rect1 = os.path.join(out_dir, 'rectified_ref.tif')
     rect2 = os.path.join(out_dir, 'rectified_sec.tif')
     disp = os.path.join(out_dir, 'rectified_disp.tif')
@@ -583,6 +583,7 @@ def main(user_cfg, start_from=0):
     # matching step:
     if start_from <= 4:
         print('4) running stereo matching...')
+        #print('running stereo matching...')
         if cfg['max_processes_stereo_matching'] is not None:
             nb_workers_stereo = cfg['max_processes_stereo_matching']
         else:
@@ -616,7 +617,7 @@ def main(user_cfg, start_from=0):
 
     # local-dsm-rasterization step:
     if start_from <= 6:
-        print('computing DSM by tile...')
+        print('6) computing DSM by tile...')
         parallel.launch_calls(plys_to_dsm, tiles, nb_workers, timeout=timeout)
 
     # global-dsm-rasterization step:

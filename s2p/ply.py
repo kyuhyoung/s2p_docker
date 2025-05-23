@@ -61,4 +61,7 @@ def write_3d_point_cloud_to_ply(path_to_ply_file, coordinates, colors=None,
     tuples = [tuple(x) for x in points]
     plydata = plyfile.PlyElement.describe(np.asarray(tuples, dtype=dtypes),
                                           'vertex')
-    plyfile.PlyData([plydata], comments=comments).write(path_to_ply_file)
+    print(f'starts to save point cloud at {path_to_ply_file}')
+    res = plyfile.PlyData([plydata], comments=comments).write(path_to_ply_file)
+    print(f'finished to save point cloud at {path_to_ply_file}. The result : {res}')
+
