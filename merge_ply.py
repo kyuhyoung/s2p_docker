@@ -36,6 +36,7 @@ import os
 from pathlib import Path
 import numpy as np
 from plyfile import PlyData, PlyElement
+import datetime
 
 
 def merge_ply_files(ply_folder: str, output_file: str) -> None:
