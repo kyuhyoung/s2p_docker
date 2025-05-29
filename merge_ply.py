@@ -73,6 +73,7 @@ def merge_ply_files(ply_folder: str, output_file: str) -> None:
 
 
 def main():
+    t_start = datetime.datetime.now()
     parser = argparse.ArgumentParser(
         description="Merge a folder of PLY point-clouds into a single PLY file."
     )
@@ -87,6 +88,8 @@ def main():
     args = parser.parse_args()
     merge_ply_files(args.ply_folder, args.output_file)
 
+    t_end = datetime.datetime.now()
+    print("Elapsed time for merging ply files :", t_end - t_start)
 
 if __name__ == "__main__":
     main()
